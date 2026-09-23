@@ -1,6 +1,6 @@
-# Nhà Mình · Family Hub
+# Cura · Nhà Mình
 
-A multilingual family operations app for the small decisions that add up: who needs to do what, what is already at home, how money is allocated, and whether a planned purchase is actually a good deal.
+Cura is a multilingual home companion for the small decisions that add up: who needs to do what, what is already at home, how money is allocated, and whether a planned purchase is actually a good deal.
 
 **Feedback welcome:** Use the [in-app feedback form](#feedback) on the public sign-in page. Suggestions are stored privately for the project owner. 
 
@@ -11,13 +11,15 @@ A multilingual family operations app for the small decisions that add up: who ne
 | Area | Features |
 | --- | --- |
 | Finance | Income and spending by person/category, editable 1–12 money jars totaling 100%, tax and claim tracking, savings, large-expense markers. |
-| Family | Shared to-dos grouped by member, editable profiles with photos, interests and favorite colors, family calendar with Google Calendar OAuth. |
+| Family | Shared to-dos grouped by member, editable profiles with photos, interests and favorite colors, family calendar with Google Calendar OAuth and a configurable event countdown. |
 | Home | Pantry and household inventory, stock updates, recurring meals, shopping lists, wardrobe photo catalog. |
 | Wishes | Shopping wishlist with tags such as makeup, home decor and hobby, plus travel and someday-to-do lists. |
 | Prices | Saved offers with store, source, expiry, discount and unit-price display; matches shopping needs. Optional licensed JSON feed integration. |
 | Language | Vietnamese, English, French, Dutch and Danish interface selection. |
 
 The site is public, but household data and photos require Google sign-in from an explicitly configured email allowlist. Adding a member profile does **not** grant account access.
+
+The dashboard countdown can follow a saved family event or an upcoming connected Google Calendar event. Its Vietnam flight illustration has a sample for **16 January 2027** clearly marked as unsaved; save or replace it with your real date. Day counts use local calendar dates and refresh automatically.
 
 ## Architecture
 
