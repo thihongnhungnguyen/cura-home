@@ -1,10 +1,12 @@
-# Nhà mình — mã frontend và backend
+# Cura · Nhà Mình — mã frontend và backend
 
 Ứng dụng quản gia gia đình và side project full stack. `frontend/` là React/Vite; `functions/api/[[path]].js` là Cloudflare Pages Function; `backend/src/` xử lý đăng nhập Google, dữ liệu D1, ảnh R2, Google Calendar, hồ sơ gia đình, cấu hình tài chính, ưu đãi và góp ý. Repository có thể đặt trên GitHub; Cloudflare Pages tự build/deploy mỗi lần push. **Không đưa khóa Google hoặc thông tin sức khỏe vào GitHub.**
 
-**Mô tả GitHub đề xuất:** `Multilingual family hub: budgets, shared to-dos, wishlists, inventory, price watch and Google Calendar. Feedback welcome via the in-app form.`
+**Mô tả GitHub đề xuất:** `Cura — multilingual home companion: budgets, shared to-dos, wishlists, inventory, price watch and Google Calendar. Feedback welcome via the in-app form.`
 
 Phản hồi từ người dùng: mở website, kéo xuống biểu mẫu **Góp ý cho dự án** ở trang đăng nhập. Góp ý được lưu trong D1, giới hạn 3 lần/ngày theo dấu vân tay IP băm; các tài khoản gia đình xem tại mục **Gia đình**. Không công khai email của người góp ý.
+
+Trang chính có **đếm ngược sự kiện**. Chọn lịch đã lưu hoặc sự kiện Google Calendar đã kết nối, hay thêm lịch mới ngay trên thẻ. Chuyến bay về Việt Nam ngày 16/01/2027 chỉ là mẫu minh họa chưa lưu; nhấn lưu mẫu khi đó thật sự là chuyến đi của bạn. Thẻ chuyến bay có vali, máy bay và biểu tượng Việt Nam. Ngày được tính theo lịch địa phương và tự cập nhật sau nửa đêm.
 
 ### Kỹ thuật và quyết định thiết kế
 
@@ -38,8 +40,8 @@ GitHub Pages đơn thuần chỉ lưu frontend tĩnh; không chạy được API
 
 ## 2. Kho dữ liệu và ảnh
 
-- Trong Cloudflare tạo một **D1 database**, ví dụ `family-hub-db`. Mở SQL Console của database và chạy nội dung `backend/migrations/0001_init.sql`, rồi `backend/migrations/0002_family_features.sql`, **mỗi file một lần và theo đúng thứ tự**. Cơ sở dữ liệu cũ chỉ cần chạy file `0002`.
-- Tạo một **R2 bucket**, ví dụ `family-hub-images`.
+- Trong Cloudflare tạo một **D1 database**, ví dụ `cura-db`. Mở SQL Console của database và chạy nội dung `backend/migrations/0001_init.sql`, rồi `backend/migrations/0002_family_features.sql`, **mỗi file một lần và theo đúng thứ tự**. Cơ sở dữ liệu cũ chỉ cần chạy file `0002`.
+- Tạo một **R2 bucket**, ví dụ `cura-images`.
 - Trong dự án Pages → **Settings** → **Bindings**, thêm D1 binding tên chính xác `DB` và R2 bucket binding tên chính xác `BUCKET`. Áp dụng cho Production; thêm Preview nếu muốn kiểm tra nhánh preview. Deploy lại sau khi thiết lập bindings.
 
 ## 3. Google Calendar
