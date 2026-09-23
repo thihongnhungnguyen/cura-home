@@ -230,6 +230,48 @@ rows.push(
 ['Lưu và đếm ngược','Save countdown','Enregistrer','Opslaan','Gem nedtælling'],
 ['Ví dụ: Bay về Việt Nam','E.g. Flight to Vietnam','Ex. Vol vers le Vietnam','Bijv. vlucht naar Vietnam','F.eks. fly til Vietnam']
 );
+rows.push(
+['Nhật ký gia đình', 'Family diary', 'Journal familial', 'Familiedagboek', 'Familiedagbog'],
+['Những khoảnh khắc đáng nhớ của cả nhà.', 'Memories worth keeping together.', 'Les souvenirs à garder ensemble.', 'Herinneringen om samen te bewaren.', 'Minder, vi gemmer sammen.'],
+['Lịch tháng', 'Monthly calendar', 'Calendrier mensuel', 'Maandkalender', 'Månedskalender'],
+['Chọn nhiều người để xem lịch cùng lúc.', 'Select several people to see their calendars together.', 'Choisissez plusieurs personnes pour voir leurs agendas.', 'Kies meerdere personen om agenda’s samen te zien.', 'Vælg flere personer for at se deres kalendere sammen.'],
+['Lọc lịch theo người', 'Filter by person', 'Filtrer par personne', 'Filter op persoon', 'Filtrer efter person'],
+['Sự kiện Google chưa gắn tên thành viên được xem là lịch chung; chỉ hiện khi chọn Tất cả hoặc Cả nhà.', 'Google events without a member name are shared and appear under All or Everyone.', 'Les événements Google sans nom sont partagés et apparaissent sous Tous ou Toute la famille.', 'Google afspraken zonder naam zijn gedeeld en staan onder Alle of Iedereen.', 'Google begivenheder uden navn er fælles og vises under Alle eller Familien.'],
+['Tháng trước', 'Previous month', 'Mois précédent', 'Vorige maand', 'Forrige måned'],
+['Tháng sau', 'Next month', 'Mois suivant', 'Volgende maand', 'Næste måned'],
+['Hôm nay', 'Today', 'Aujourd’hui', 'Vandaag', 'I dag'],
+['sự kiện', 'events', 'événements', 'afspraken', 'begivenheder'],
+['Ngày này chưa có lịch hẹn.', 'No events on this day.', 'Aucun événement ce jour-là.', 'Geen afspraken op deze dag.', 'Ingen aftaler denne dag.'],
+['Lịch lưu trong Cura vẫn hiển thị.', 'Cura events are still shown.', 'Les événements Cura restent visibles.', 'Cura afspraken blijven zichtbaar.', 'Cura aftaler vises stadig.'],
+['Chuyện nhà mình', 'Our family stories', 'Nos histoires de famille', 'Onze familieverhalen', 'Vores familiehistorier'],
+['Viết lại những ngày đáng nhớ, thêm ảnh và cùng xem lại sau này.', 'Write down special days, add photos and revisit them together.', 'Racontez les beaux jours, ajoutez des photos et retrouvez-les ensemble.', 'Schrijf mooie dagen op, voeg foto’s toe en bekijk ze later samen.', 'Skriv om særlige dage, tilføj billeder og kig tilbage sammen.'],
+['Viết bài mới', 'Write a post', 'Écrire un article', 'Bericht schrijven', 'Skriv et indlæg'],
+['Chưa có bài nhật ký. Hãy lưu lại một khoảnh khắc của nhà mình.', 'No posts yet. Save a family moment.', 'Aucun article pour le moment. Gardez un souvenir de famille.', 'Nog geen berichten. Bewaar een familiemoment.', 'Ingen indlæg endnu. Gem et familieminde.'],
+['Viết bài đầu tiên', 'Write the first post', 'Écrire le premier article', 'Schrijf het eerste bericht', 'Skriv første indlæg'],
+['Đọc bài', 'Read post', 'Lire', 'Lees bericht', 'Læs indlæg'],
+['Viết nhật ký', 'Write diary', 'Écrire le journal', 'Dagboek schrijven', 'Skriv dagbog'],
+['Tiêu đề *', 'Title *', 'Titre *', 'Titel *', 'Titel *'],
+['Một ngày đáng nhớ…', 'A memorable day…', 'Une belle journée…', 'Een bijzondere dag…', 'En særlig dag…'],
+['Người viết', 'Author', 'Auteur', 'Auteur', 'Forfatter'],
+['Câu chuyện của nhà mình *', 'Our story *', 'Notre histoire *', 'Ons verhaal *', 'Vores historie *'],
+['Hôm nay nhà mình…', 'Today our family…', 'Aujourd’hui, notre famille…', 'Vandaag hebben we…', 'I dag har vi…'],
+['Thêm ảnh (JPEG, PNG, WebP; tối đa 6 ảnh)', 'Add photos (JPEG, PNG, WebP; max 6)', 'Ajouter des photos (6 max.)', 'Foto’s toevoegen (max. 6)', 'Tilføj billeder (maks. 6)'],
+['Tối đa 6 ảnh cho mỗi bài viết.', 'Up to 6 photos per post.', '6 photos maximum par article.', 'Maximaal 6 foto’s per bericht.', 'Højst 6 billeder pr. indlæg.'],
+['Viết tiêu đề và nội dung nhật ký.', 'Enter a title and story.', 'Ajoutez un titre et un texte.', 'Schrijf een titel en verhaal.', 'Skriv en titel og tekst.'],
+['Đăng bài', 'Publish post', 'Publier', 'Publiceren', 'Udgiv'],
+['Xóa bài nhật ký này?', 'Delete this diary post?', 'Supprimer cet article ?', 'Dit bericht verwijderen?', 'Slet dette indlæg?'],
+['Xóa ảnh', 'Remove photo', 'Retirer la photo', 'Foto verwijderen', 'Fjern billede'],
+['ảnh', 'photos', 'photos', 'foto’s', 'billeder'],
+['Đóng', 'Close', 'Fermer', 'Sluiten', 'Luk'],
+['Số tiền (DKK)', 'Amount (DKK)', 'Montant (DKK)', 'Bedrag (DKK)', 'Beløb (DKK)'],
+['Đính ảnh (JPEG, PNG, WebP)', 'Attach photo (JPEG, PNG, WebP)', 'Ajouter une photo (JPEG, PNG, WebP)', 'Foto toevoegen (JPEG, PNG, WebP)', 'Vedhæft billede (JPEG, PNG, WebP)'],
+['Chỉ số / nội dung theo dõi', 'Health metric / observation', 'Indicateur / observation de santé', 'Gezondheidswaarde / observatie', 'Sundhedsmåling / observation'],
+['Chiều cao của Shin', 'Shin’s height', 'Taille de Shin', 'Shins lengte', 'Shins højde'],
+['Giá trị đo', 'Measured value', 'Valeur mesurée', 'Gemeten waarde', 'Målt værdi'],
+['Đơn vị (cm, kg, giờ, bpm…)', 'Unit (cm, kg, hours, bpm…)', 'Unité (cm, kg, h, bpm…)', 'Eenheid (cm, kg, uur, bpm…)', 'Enhed (cm, kg, timer, bpm…)'],
+['Ngày đo', 'Measurement date', 'Date de mesure', 'Meetdatum', 'Måledato'],
+['Bối cảnh đo / kết quả / ghi chú', 'Measurement context / result / notes', 'Contexte / résultat / notes', 'Meetcontext / uitslag / notities', 'Måleforhold / resultat / noter']
+);
 const map=new Map(rows.map(([vi,en,fr,nl,da])=>[vi,{vi,en,fr,nl,da}]));
 export function t(text,lang='vi'){return map.get(text)?.[lang]??text}
 export const languages=[['vi','Tiếng Việt'],['en','English'],['fr','Français'],['nl','Nederlands'],['da','Dansk']];
