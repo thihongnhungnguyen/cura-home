@@ -1,0 +1,4 @@
+GOOGLE_CLIENT_ID="your-oauth-client-id.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET="your-oauth-client-secret"
+ALLOWED_EMAILS="you@gmail.com,partner@gmail.com"
+TOKEN_ENCRYPTION_KEY="base64url-encoded-32-byte-secret"
