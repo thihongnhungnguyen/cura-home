@@ -1,6 +1,7 @@
 import React,{useEffect,useMemo,useState} from 'react';
 import {ChevronLeft,ChevronRight,RefreshCw,ExternalLink} from 'lucide-react';
 import {t} from './i18n.js';
+import {detailsOf,expandRecords} from './recurrence.js';
 
 const pad=n=>String(n).padStart(2,'0');
 const dayKey=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
@@ -14,11 +15,12 @@ export default function FamilyCalendar({items,people,api,lang,onError,add}){
  const start=new Date(month.getFullYear(),month.getMonth(),1),end=new Date(month.getFullYear(),month.getMonth()+1,1);
  useEffect(()=>{let alive=true;setLoading(true);setLoadError('');api('/calendar/events?from='+encodeURIComponent(start.toISOString())+'&to='+encodeURIComponent(end.toISOString())).then(rows=>{if(alive)setGoogle(rows)}).catch(err=>{if(alive){setGoogle([]);setLoadError(err.message)}}).finally(()=>{if(alive)setLoading(false)});return()=>{alive=false}},[month,refresh]);
  const entries=useMemo(()=>{
-  const local=items.filter(x=>x.kind==='event'&&x.date).map(x=>({key:'local-'+x.id,date:x.date,title:x.title,person:x.person||'Cả nhà',time:x.time,source:'local'}));
-  const sent=new Set(items.filter(x=>x.kind==='event'&&x.details).flatMap(x=>{try{return [JSON.parse(x.details).googleEventId]}catch{return []}}));
+  const monthStart=dayKey(start),monthEnd=dayKey(new Date(month.getFullYear(),month.getMonth()+1,0));
+  const local=expandRecords(items.filter(x=>x.kind==='event'&&x.date),monthStart,monthEnd).map(x=>({key:'local-'+x.id,date:x.date,title:x.title,person:x.person||'Cả nhà',time:x.time,source:'local'}));
+  const sent=new Set(items.filter(x=>x.kind==='event').map(x=>detailsOf(x).googleEventId).filter(Boolean));
   const remote=google.filter(x=>!sent.has(x.id)).map(x=>{const match=names.find(n=>x.title?.endsWith(' · '+n));return {key:'google-'+x.id,date:x.start?.slice(0,10),title:x.title,person:match||'Cả nhà',time:x.start?.includes('T')?new Date(x.start).toLocaleTimeString(locale[lang],{hour:'2-digit',minute:'2-digit'}):'',source:'google',link:x.link}});
   return [...local,...remote].filter(x=>x.date&&(!selected.size||selected.has(x.person))).sort((a,b)=>(a.date+(a.time||'')).localeCompare(b.date+(b.time||'')));
- },[items,google,selected,people,lang]);
+ },[items,google,selected,people,lang,month]);
  const first=(start.getDay()+6)%7;const count=Math.ceil((first+new Date(month.getFullYear(),month.getMonth()+1,0).getDate())/7)*7;
  const cells=Array.from({length:count},(_,i)=>new Date(month.getFullYear(),month.getMonth(),i-first+1));
  const byDay=useMemo(()=>entries.reduce((map,x)=>{(map[x.date]??=[]).push(x);return map},{}),[entries]);
