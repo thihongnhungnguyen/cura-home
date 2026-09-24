@@ -10,7 +10,7 @@ const configs={
  saving:{title:'Mục tiêu tiết kiệm',example:'Quỹ du lịch',categories:['Khẩn cấp','Du lịch','Giáo dục','Khác'],amount:true,date:'Ngày mục tiêu',note:'Kế hoạch đạt mục tiêu'},
  event:{title:'Tên lịch hẹn',example:'Họp phụ huynh của Shin',categories:['Gia đình','Công việc','Trường học','Sức khỏe','Du lịch'],date:'Ngày diễn ra',time:true,note:'Địa điểm và ghi chú'},
  health:{title:'Chỉ số / nội dung theo dõi',example:'Chiều cao của Shin',categories:['Tăng trưởng','Giấc ngủ','Stress','Huyết áp','Nhịp tim','Xét nghiệm máu','Tuổi sinh học','Khác'],quantity:'Giá trị đo',unit:'Đơn vị (cm, kg, giờ, bpm…)',date:'Ngày đo',note:'Bối cảnh đo / kết quả / ghi chú',photo:true},
- food:{title:'Tên thực phẩm',example:'Thịt lợn băm',categories:['Đồ khô','Thịt cá đông lạnh','Rau củ','Gia vị','Đồ uống','Khác'],quantity:'Số lượng còn',unit:'Đơn vị (kg, gói, hộp…)',date:'Hạn dùng',note:'Vị trí cất / nơi mua',photo:true},
+ food:{title:'Tên thực phẩm',example:'Thịt lợn băm',categories:['Đồ khô','Thịt cá tươi','Thịt cá đông lạnh','Rau củ','Hoa quả','Gia vị','Đồ uống','Khác'],quantity:'Số lượng còn',unit:'Đơn vị (kg, gói, hộp…)',date:'Hạn dùng',note:'Vị trí cất / nơi mua',photo:true},
  meal:{title:'Tên món nhà hay ăn',example:'Bò hầm khoai tây',categories:['Bữa sáng','Bữa trưa','Bữa tối','Ăn nhẹ'],note:'Nguyên liệu (cách nhau bằng dấu phẩy)',photo:true},
  wardrobe:{title:'Tên món đồ',example:'Áo len màu kem',categories:['Quần áo','Giày dép','Mỹ phẩm','Chăm sóc tóc','Phụ kiện'],quantity:'Số lượng',unit:'Đơn vị',note:'Size, màu, vị trí cất',photo:true},
  idea:{title:'Tên concept phối đồ',example:'Đi dạo mùa thu',categories:['Công sở','Đi chơi','Dự tiệc','Khác'],note:'Các món phối cùng / link tham khảo',photo:true},
