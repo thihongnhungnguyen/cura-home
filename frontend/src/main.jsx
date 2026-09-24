@@ -32,7 +32,7 @@ function App(){const [email,setEmail]=useState(null),[authLoading,setAuthLoading
  const visible=useMemo(()=>items.filter(x=>groups[tab].includes(x.kind)&&(person==='Tất cả'||x.person===person)&&(x.title+' '+x.category+' '+(x.note||'')).toLowerCase().includes(query.toLowerCase())),[items,tab,person,query]);
  const amounts=expenses.map(x=>x.amount||0).filter(Boolean).sort((a,b)=>a-b),median=amounts.length?amounts[Math.floor(amounts.length/2)]:0,threshold=Math.max(500,median*2.5);
  function navigate(t){setTab(t);setQuery('');setPerson('Tất cả')}
- function add(kind){setForm(empty(kind));setDialog(true);setError('')}
+ function add(kind,defaults={}){setForm({...empty(kind),...defaults});setDialog(true);setError('')}
  async function createCountdownEvent(data){const result=await api('/records',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});setItems(xs=>[result,...xs]);return result}
  async function save(e){e.preventDefault();setBusy(true);try{const result=await api('/records',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({...form,details:JSON.stringify({icon:form.icon||undefined,jar_id:form.jar_id||undefined,tags:form.tags?form.tags.split(',').map(x=>x.trim()).filter(Boolean):undefined,recurrence:form.frequency?{frequency:form.frequency,until:form.repeat_until||undefined}:undefined})})});setItems(xs=>[result,...xs]);setDialog(false);navigate(sectionFor[form.kind])}catch(e){setError(e.message)}finally{setBusy(false)}}
  async function update(x,patch){try{await api('/records',{method:'PATCH',headers:{'content-type':'application/json'},body:JSON.stringify({id:x.id,...patch})});setItems(xs=>xs.map(y=>y.id===x.id?{...y,...patch}:y))}catch(e){setError(e.message)}}
