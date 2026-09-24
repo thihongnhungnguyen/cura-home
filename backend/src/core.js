@@ -1,5 +1,5 @@
 import {handleExtras, handlePublicFeedback} from './extras.js';
-const KINDS = new Set(['income','expense','claim','tax','saving','event','health','food','meal','wardrobe','idea','household','shopping','task','wishlist','diary']);
+const KINDS = new Set(['income','expense','claim','tax','saving','event','health','food','meal','meal_log','wardrobe','idea','household','shopping','task','wishlist','diary']);
 const DAY = 86400;
 const json = (data,status=200,headers={}) => new Response(JSON.stringify(data),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store',...headers}});
 const error = (message,status=400)=>json({error:message},status);
