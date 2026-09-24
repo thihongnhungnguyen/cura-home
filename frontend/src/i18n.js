@@ -334,6 +334,12 @@ rows.push(
  ['Thuế & tiết kiệm sắp tới','Upcoming tax & savings','Impôts et épargne à venir','Aankomende belastingen en sparen','Kommende skat og opsparing'],
  ['Chưa có kỳ thuế hoặc tiết kiệm sắp tới.','No upcoming tax or savings dates.','Aucune échéance à venir.','Geen aankomende belasting- of spaardatums.','Ingen kommende skatte- eller opsparingsdatoer.']
 );
+rows.push(
+ ['Mực vàng trong hũ biểu thị tiền còn lại so với kế hoạch tháng này.','The gold level shows money remaining against this month’s plan.','Le niveau d’or indique l’argent restant sur le budget du mois.','Het goudniveau toont wat overblijft van het maandbudget.','Guldniveauet viser, hvad der er tilbage af månedens budget.'],
+ ['Rê chuột hoặc chạm món đồ để xem số lượng còn.','Hover or tap an item to see how much is left.','Survolez ou touchez un produit pour voir la quantité restante.','Beweeg over of tik op een product om de voorraad te zien.','Hold musen over eller tryk på en vare for at se antallet.'],
+ ['Thêm đồ vào','Add to','Ajouter dans','Toevoegen aan','Tilføj til'],
+ ['Thêm đồ','Add item','Ajouter','Toevoegen','Tilføj']
+);
 const map=new Map(rows.map(([vi,en,fr,nl,da])=>[vi,{vi,en,fr,nl,da}]));
 export function t(text,lang='vi'){return map.get(text)?.[lang]??text}
 export const languages=[['vi','Tiếng Việt'],['en','English'],['fr','Français'],['nl','Nederlands'],['da','Dansk']];
